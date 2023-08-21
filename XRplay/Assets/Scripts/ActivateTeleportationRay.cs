@@ -9,8 +9,10 @@ public class ActivateTeleportationRay : MonoBehaviour
 
     public InputActionProperty leftActivate;
 
+    public InputActionProperty leftCancel;
+
     void Update()
     {
-        leftTeleportation.SetActive(leftActivate.action.ReadValue<float>() > 0.1f);
+        leftTeleportation.SetActive(leftCancel.action.ReadValue<float>()==0 && leftActivate.action.ReadValue<float>() > 0.1f); //no teleport when grabbing objects
     }
 }
