@@ -26,7 +26,8 @@ public class FireBulletOnActivate : MonoBehaviour
     {
         GameObject spawnedBullet = Instantiate(bullet);
         spawnedBullet.transform.position = spawnPoint.position;
-        spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
+        spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed; 
+                                                           //forward moves the object in the direction of the blue axis
 
         Destroy(spawnedBullet,5);
     }
