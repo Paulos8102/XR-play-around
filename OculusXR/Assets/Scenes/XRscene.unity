@@ -2840,6 +2840,7 @@ GameObject:
   - component: {fileID: 657303985}
   - component: {fileID: 657303984}
   - component: {fileID: 657303988}
+  - component: {fileID: 657303992}
   - component: {fileID: 657303987}
   - component: {fileID: 657303989}
   - component: {fileID: 657303990}
@@ -3098,6 +3099,44 @@ MonoBehaviour:
   rightGrabRay: {fileID: 1069670639}
   leftDirectGrab: {fileID: 165402872}
   rightDirectGrab: {fileID: 67840983}
+--- !u!114 &657303992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657303980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e39492806b334982b6b84c90dd927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 0}
+  m_TurnSpeed: 60
+  m_LeftHandTurnAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Left Hand Turn
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: 28a6ea06-6072-42dc-85f3-c4ee7c30e564
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_RightHandTurnAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Right Hand Turn
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: 3717b447-a44c-4282-9665-4df6899e694b
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -4019,6 +4058,7 @@ GameObject:
   - component: {fileID: 824249291}
   - component: {fileID: 824249290}
   - component: {fileID: 824249289}
+  - component: {fileID: 824249293}
   m_Layer: 5
   m_Name: Canvas - Rotation
   m_TagString: Untagged
@@ -4105,13 +4145,27 @@ RectTransform:
   - {fileID: 191928016}
   - {fileID: 1612805434}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 4.23, y: 2.011}
   m_SizeDelta: {x: 112.7592, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &824249293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824249288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0fac3b07f6f99a40928da2b32715734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  continuousTurn: {fileID: 657303992}
+  snapTurn: {fileID: 657303988}
 --- !u!1 &874555318
 GameObject:
   m_ObjectHideFlags: 0
@@ -7322,7 +7376,7 @@ Transform:
   - {fileID: 892790057}
   - {fileID: 785361589}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1415052727
 GameObject:
@@ -7821,7 +7875,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 824249293}
+        m_TargetAssemblyTypeName: SetTurnType, Assembly-CSharp
+        m_MethodName: SetTypeFromIndex
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1612805436
 MonoBehaviour:
