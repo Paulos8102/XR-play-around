@@ -2896,9 +2896,9 @@ GameObject:
   - component: {fileID: 657303981}
   - component: {fileID: 657303986}
   - component: {fileID: 657303985}
-  - component: {fileID: 657303984}
   - component: {fileID: 657303988}
   - component: {fileID: 657303992}
+  - component: {fileID: 657303984}
   - component: {fileID: 657303987}
   - component: {fileID: 657303993}
   - component: {fileID: 657303994}
@@ -3193,7 +3193,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_Reference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   leftRay: {fileID: 786341478}
 --- !u!1 &705507993
 GameObject:
@@ -6595,7 +6595,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 8270855663187062767, guid: 1392f805216c47742996d4742c80721c, type: 3}
+  m_ModelPrefab: {fileID: 0}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
