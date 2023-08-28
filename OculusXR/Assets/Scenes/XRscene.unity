@@ -3117,8 +3117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 919e39492806b334982b6b84c90dd927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_System: {fileID: 0}
-  m_TurnSpeed: 60
+  m_System: {fileID: 657303986}
+  m_TurnSpeed: 45
   m_LeftHandTurnAction:
     m_UseReference: 0
     m_Action:
