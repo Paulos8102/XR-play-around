@@ -2248,6 +2248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ea276f1438af1458db15a880d814c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  head: {fileID: 1131507887}
+  spawnDistance: 2
   instr: {fileID: 1935591387}
   showButton:
     m_UseReference: 1
@@ -4979,7 +4981,7 @@ RectTransform:
   m_GameObject: {fileID: 824249288}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 4.19782}
-  m_LocalScale: {x: 0.013860495, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1010773379}
