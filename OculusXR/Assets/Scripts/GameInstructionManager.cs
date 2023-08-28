@@ -31,7 +31,7 @@ public class GameInstructionManager : MonoBehaviour
 
         instr.transform.LookAt (new Vector3 (head.position.x, instr.transform.forward.y, head.position.z));
 
-        //instr.transform.forward *= -1;
+        instr.transform.forward *= -1;
         //to flip the rotation of the menu
     }
 }
