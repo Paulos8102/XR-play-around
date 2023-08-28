@@ -2900,8 +2900,8 @@ GameObject:
   - component: {fileID: 657303988}
   - component: {fileID: 657303992}
   - component: {fileID: 657303987}
-  - component: {fileID: 657303989}
-  - component: {fileID: 657303990}
+  - component: {fileID: 657303993}
+  - component: {fileID: 657303994}
   - component: {fileID: 657303991}
   m_Layer: 6
   m_Name: XR Origin
@@ -3089,58 +3089,6 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f, type: 3}
---- !u!114 &657303989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 657303980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01f69dc1cb084aa42b2f2f8cd87bc770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_System: {fileID: 657303986}
-  m_DelayTime: 0
---- !u!114 &657303990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 657303980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e275e71877f96a6478647dd6052636b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftTeleportation: {fileID: 1088584575}
-  leftActivate:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Left Activate
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 17d3b9a7-67b2-4627-be7a-45d80f19161d
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  leftCancel:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Left Cancel
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: d7679e27-e510-4c86-b4f5-8a0581fb9e38
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  leftRay: {fileID: 786341478}
 --- !u!114 &657303991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3195,6 +3143,58 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &657303993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657303980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f69dc1cb084aa42b2f2f8cd87bc770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 657303986}
+  m_DelayTime: 0
+--- !u!114 &657303994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657303980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e275e71877f96a6478647dd6052636b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftTeleportation: {fileID: 1088584575}
+  leftActivate:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Left Activate
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: a46509ea-a591-4e14-9d40-fed3e5c2c4fa
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  leftCancel:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Left Cancel
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 5522787f-a51a-46dc-af0d-e67c06a277ed
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  leftRay: {fileID: 786341478}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
