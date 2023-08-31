@@ -22,7 +22,7 @@ public class ButtonFollowVisual : MonoBehaviour
 
     public void Follow(BaseInteractionEventArgs hover)
     {
-        if (hover.interactableObject is XRPokeInteractor)
+        if (hover.interactorObject is XRPokeInteractor)
         {
             XRPokeInteractor interactor = (XRPokeInteractor)hover.interactorObject;
             isFollowing = true;
