@@ -7,6 +7,9 @@ public class ButtonFollowVisual : MonoBehaviour
 {
     public Transform visualTarget; //reference of our visual button
     public Vector3 localAxis; //axis with which the button will move
+    public float resetSpeed = 5.0f;
+
+    private Vector3 initialLocalPos;
 
     private Vector3 offset;
     private Transform pokeAttachTransform;
@@ -17,8 +20,11 @@ public class ButtonFollowVisual : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        initialLocalPos = visualTarget.localPosition;
+
         interactable = GetComponent<XRBaseInteractable>();
         interactable.hoverEntered.AddListener(Follow);
+        interactable.hoverExited.AddListener(Reset);
     }
 
     public void Follow(BaseInteractionEventArgs hover)
@@ -33,6 +39,15 @@ public class ButtonFollowVisual : MonoBehaviour
         }
     }
 
+    public void Reset(BaseInteractionEventArgs hover) //funtion to not follow after poke interaction 
+    {
+        if(hover.interactorObject is XRPokeInteractor)
+        {
+            isFollowing = false;
+        }
+             
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -40,7 +55,13 @@ public class ButtonFollowVisual : MonoBehaviour
         {
             Vector3 localTargetPosition = visualTarget.InverseTransformPoint(pokeAttachTransform.position + offset); //To make button move in the same (defined) axis
             Vector3 constrainedLocalTargetPosition = Vector3.Project(localTargetPosition, localAxis);
+
             visualTarget.position = visualTarget.TransformPoint(constrainedLocalTargetPosition); //making it back a world coordinate
+        }
+
+        else
+        {
+            visualTarget.localPosition = Vector3.Lerp(visualTarget.localPosition, initialLocalPos, Time.deltaTime * resetSpeed); //set back to initial position if button no fully pressed
         }
     }
 }
