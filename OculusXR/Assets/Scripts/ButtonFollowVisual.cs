@@ -8,6 +8,9 @@ public class ButtonFollowVisual : MonoBehaviour
     public Transform visualTarget; //reference of our visual button
     public Vector3 localAxis; //axis with which the button will move
     public float resetSpeed = 5.0f;
+    public float followAngleThreshold = 45.0f;
+
+    private bool freeze = false;
 
     private Vector3 initialLocalPos;
 
@@ -25,6 +28,7 @@ public class ButtonFollowVisual : MonoBehaviour
         interactable = GetComponent<XRBaseInteractable>();
         interactable.hoverEntered.AddListener(Follow);
         interactable.hoverExited.AddListener(Reset);
+        interactable.selectEntered.AddListener(Freeze);
     }
 
     public void Follow(BaseInteractionEventArgs hover)
@@ -33,9 +37,18 @@ public class ButtonFollowVisual : MonoBehaviour
         {
             XRPokeInteractor interactor = (XRPokeInteractor)hover.interactorObject;
             isFollowing = true;
+            freeze = false;
             
             pokeAttachTransform = interactor.attachTransform;
             offset = visualTarget.position - pokeAttachTransform.position;
+
+            float pokeAngle = Vector3.Angle(offset, visualTarget.TransformDirection(localAxis)); //to not allow downward uplift
+
+            if(pokeAngle < followAngleThreshold)
+            {
+                isFollowing = false;
+                freeze = true;
+            }
         }
     }
 
@@ -44,13 +57,25 @@ public class ButtonFollowVisual : MonoBehaviour
         if(hover.interactorObject is XRPokeInteractor)
         {
             isFollowing = false;
+            freeze = false;
         }
              
+    }
+
+    public void Freeze(BaseInteractionEventArgs hover)
+    {
+        if(hover.interactorObject is XRPokeInteractor)
+        {
+            freeze = true;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (freeze) //if fixed it'll never come down to update the position values
+            return;
+
         if(isFollowing)
         {
             Vector3 localTargetPosition = visualTarget.InverseTransformPoint(pokeAttachTransform.position + offset); //To make button move in the same (defined) axis
