@@ -3006,8 +3006,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 112
+  m_CollisionDetection: 2
 --- !u!1 &345308616
 GameObject:
   m_ObjectHideFlags: 0
@@ -4693,6 +4693,7 @@ GameObject:
   - component: {fileID: 709035720}
   - component: {fileID: 709035719}
   - component: {fileID: 709035718}
+  - component: {fileID: 709035721}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -4778,6 +4779,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709035716}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &709035721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709035716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec72c176c5b2f2340a8b788a378d14de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadTime: 1
+  onPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  onReleased:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &712023869
 GameObject:
   m_ObjectHideFlags: 0
@@ -8421,7 +8441,7 @@ GameObject:
   - component: {fileID: 1072147828}
   - component: {fileID: 1072147827}
   - component: {fileID: 1072147826}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
