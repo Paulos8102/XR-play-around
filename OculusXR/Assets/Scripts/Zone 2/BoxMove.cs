@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class BoxMove : MonoBehaviour
 {
-    [SerializeField] private float boxSpeed = 5.0f;
+    [SerializeField] private float XBoxSpeed = 5.0f;
+    [SerializeField] private float YBoxSpeed = 0;
+    [SerializeField] private float ZBoxSpeed = 0;
 
     private Vector3 _startPosition;
 
@@ -16,6 +18,6 @@ public class BoxMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = _startPosition + new Vector3(Mathf.Sin(Time.deltaTime), 0, 0);
+        transform.position = _startPosition + new Vector3(Mathf.Sin(Time.time) * XBoxSpeed, Mathf.Sin(Time.time) * YBoxSpeed, Mathf.Sin(Time.time) * ZBoxSpeed);
     }
 }

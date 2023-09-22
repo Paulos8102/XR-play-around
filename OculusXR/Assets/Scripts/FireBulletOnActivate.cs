@@ -20,7 +20,7 @@ public class FireBulletOnActivate : MonoBehaviour
     //public Animator anim;
 
     [SerializeField] private AudioSource reloadSound;
-    //[SerializeField] private AudioSource shootSound;
+    [SerializeField] private AudioSource shootSound;
 
     // Start is called before the first frame update
     void Start()
@@ -63,7 +63,7 @@ public class FireBulletOnActivate : MonoBehaviour
         spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
         //forward moves the object in the direction of the blue axis
 
-        //shootSound.Play();
+        shootSound.Play();
         isFiring = false;
         Destroy(spawnedBullet,5);
     }
