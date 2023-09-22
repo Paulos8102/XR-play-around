@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.26654112, g: 0.46278605, b: 0.61386305, a: 1}
+  m_IndirectSpecularColor: {r: 0.26757243, g: 0.46359125, b: 0.61414677, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9485,7 +9485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &965102951
 Transform:
   m_ObjectHideFlags: 0
@@ -9514,9 +9514,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c1250e7ee7d3c448a53078781aa650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XBoxSpeed: 0
-  YBoxSpeed: 1
-  ZBoxSpeed: 0
+  gS: 0
+  XDis: 5
+  YDis: 0
+  ZDis: 0
 --- !u!114 &965102953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10284,7 +10285,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -12604,9 +12605,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c1250e7ee7d3c448a53078781aa650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XBoxSpeed: 5
-  YBoxSpeed: 5
-  ZBoxSpeed: 0
+  gS: 5
+  XDis: 5
+  YDis: 0
+  ZDis: 0
 --- !u!114 &1165198118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12628,7 +12630,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165198115}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f589cc1300bc0f4e95e8fff5b6016e0, type: 3}
   m_Name: 
@@ -13386,7 +13388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1299971359
 Transform:
   m_ObjectHideFlags: 0
@@ -13415,9 +13417,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c1250e7ee7d3c448a53078781aa650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XBoxSpeed: 0
-  YBoxSpeed: 3
-  ZBoxSpeed: 0
+  gS: 0
+  XDis: 5
+  YDis: 0
+  ZDis: 0
 --- !u!114 &1299971361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14506,7 +14509,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -15904,7 +15907,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1662983713
 Transform:
   m_ObjectHideFlags: 0
@@ -15933,9 +15936,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c1250e7ee7d3c448a53078781aa650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XBoxSpeed: 7
-  YBoxSpeed: 0
-  ZBoxSpeed: 0
+  gS: 0
+  XDis: 5
+  YDis: 0
+  ZDis: 0
 --- !u!114 &1662983715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20212,7 +20216,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
