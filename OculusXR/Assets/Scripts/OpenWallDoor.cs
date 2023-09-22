@@ -10,6 +10,8 @@ public class OpenWallDoor : MonoBehaviour
     private bool lowerDoor = false;
     private Vector3 raisedPosition;
 
+    [SerializeField] private AudioSource doorSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,8 @@ public class OpenWallDoor : MonoBehaviour
     {
         float timeElapsed = 0;
         Vector3 startPosition = transform.position;
+
+        doorSound.Play();
 
         while(timeElapsed < duration)
         {

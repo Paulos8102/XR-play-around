@@ -17,10 +17,10 @@ public class FireBulletOnActivate : MonoBehaviour
     public float reloadTime = 3f;
     private bool isReloading = false;
 
-    public Animator anim;
+    //public Animator anim;
 
     [SerializeField] private AudioSource reloadSound;
-    [SerializeField] private AudioSource shootSound;
+    //[SerializeField] private AudioSource shootSound;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +37,7 @@ public class FireBulletOnActivate : MonoBehaviour
     public void OnEnbale()
     {
         isReloading = false;
-        anim.SetBool("Reloading", false);
+        //anim.SetBool("Reloading", false);
     }
 
     // Update is called once per frame
@@ -72,13 +72,13 @@ public class FireBulletOnActivate : MonoBehaviour
     {
         isReloading = true;
 
-        anim.SetBool("Reloading", true);
+        //anim.SetBool("Reloading", true);
 
         reloadSound.Play();
 
         yield return new WaitForSeconds(reloadTime - .25f);
 
-        anim.SetBool("Reloading", false);
+        //anim.SetBool("Reloading", false);
 
         yield return new WaitForSeconds(.25f);
 
