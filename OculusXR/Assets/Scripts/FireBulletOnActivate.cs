@@ -60,16 +60,17 @@ public class FireBulletOnActivate : MonoBehaviour
 
         GameObject spawnedBullet = Instantiate(bullet);
         spawnedBullet.transform.position = spawnPoint.position;
-        spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed; 
-                                                           //forward moves the object in the direction of the blue axis
+        spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
+        //forward moves the object in the direction of the blue axis
 
+        //shootSound.Play();
+        isFiring = false;
         Destroy(spawnedBullet,5);
     }
 
     public IEnumerator Reload()
     {
         isReloading = true;
-        Debug.Log("Reloading");
 
         anim.SetBool("Reloading", true);
 
