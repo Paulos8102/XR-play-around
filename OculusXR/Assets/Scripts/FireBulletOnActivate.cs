@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class FireBulletOnActivate : MonoBehaviour
 {
@@ -53,19 +55,22 @@ public class FireBulletOnActivate : MonoBehaviour
         }
     }
 
+    public static event Action GunFired; //to show in the UI Wrist band
+
     public void FireBullet(ActivateEventArgs arg)
     {
         isFiring = true;
         currentAmmo--;
 
-        GameObject spawnedBullet = Instantiate(bullet);
-        spawnedBullet.transform.position = spawnPoint.position;
+        GameObject spawnedBullet = Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
         spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
         //forward moves the object in the direction of the blue axis
 
         shootSound.Play();
         isFiring = false;
         Destroy(spawnedBullet,5);
+
+        GunFired?.Invoke(); //delegate call
     }
 
     public IEnumerator Reload()

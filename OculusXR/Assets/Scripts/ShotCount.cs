@@ -12,7 +12,19 @@ public class ShotCount : MonoBehaviour
     void Start()
     {
         text = GetComponent<TextMeshProUGUI>();
+        FireBulletOnActivate.GunFired += IncreaseCounter;
+        UpdateText();
+    }
 
+    private void IncreaseCounter()
+    {
+        shotCounter++;
+        UpdateText();
+    }
+
+    private void UpdateText()
+    {
+        text.text = shotCounter.ToString();
     }
 
     // Update is called once per frame
