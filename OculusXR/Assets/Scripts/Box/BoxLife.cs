@@ -16,7 +16,6 @@ public class BoxLife : MonoBehaviour
         healthBar.value = currentHealth;
     }
 
-
     private void Start()
     {
         currentHealth = maxHealth;  // Initialize current health to maximum health

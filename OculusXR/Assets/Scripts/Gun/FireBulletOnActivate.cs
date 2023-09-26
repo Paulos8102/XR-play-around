@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-
 public class FireBulletOnActivate : MonoBehaviour
 {
     public GameObject bullet;
