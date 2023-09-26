@@ -9,9 +9,12 @@ public class FireBulletOnActivate : MonoBehaviour
     public GameObject bullet;
     public Transform spawnPoint;
     public float fireSpeed = 20.0f;
+    public float fireRate = 1f;
+
+    public ParticleSystem muzzleFlash;
 
     private bool isFiring = false;
-    //private float nextTimeToFire = 0f;
+    private float nextTimeToFire = 0f;
 
     public int maxAmmo = 5;
     private int currentAmmo;
@@ -19,8 +22,7 @@ public class FireBulletOnActivate : MonoBehaviour
     private bool isReloading = false;
 
     public Animator anim;
-    public ParticleSystem muzzleFlash;
-
+    
     [SerializeField] private AudioSource reloadSound;
     [SerializeField] private AudioSource shootSound;
 
@@ -33,13 +35,18 @@ public class FireBulletOnActivate : MonoBehaviour
         }
 
         XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
-        grabbable.activated.AddListener(FireBullet);
+
+        if( !isFiring && Time.time >= nextTimeToFire )
+        {
+            nextTimeToFire = Time.time + 1f / fireRate;
+            grabbable.activated.AddListener(FireBullet);
+        }
     }
 
     public void OnEnbale()
     {
         isReloading = false;
-        //anim.SetBool("Reloading", false);
+        anim.SetBool("Reloading", false);
     }
 
     // Update is called once per frame
@@ -59,8 +66,6 @@ public class FireBulletOnActivate : MonoBehaviour
 
     public void FireBullet(ActivateEventArgs arg)
     {
-        muzzleFlash.Play();
-
         isFiring = true;
         currentAmmo--;
 
@@ -68,7 +73,11 @@ public class FireBulletOnActivate : MonoBehaviour
         spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
         //forward moves the object in the direction of the blue axis
 
+        muzzleFlash.Play();
         shootSound.Play();
+
+        muzzleFlash.Stop();
+
         isFiring = false;
         Destroy(spawnedBullet,5);
 
@@ -79,13 +88,13 @@ public class FireBulletOnActivate : MonoBehaviour
     {
         isReloading = true;
 
-        //anim.SetBool("Reloading", true);
+        anim.SetBool("Reloading", true);
 
         reloadSound.Play();
 
         yield return new WaitForSeconds(reloadTime - .25f);
 
-        //anim.SetBool("Reloading", false);
+        anim.SetBool("Reloading", false);
 
         yield return new WaitForSeconds(.25f);
 
