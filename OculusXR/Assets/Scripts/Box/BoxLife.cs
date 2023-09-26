@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,8 +32,11 @@ public class BoxLife : MonoBehaviour
         }
     }
 
+    public static event Action BoxDied; //to show in the UI Wrist band
     public void DestroyBox()
     {
         Destroy(gameObject);
+
+        BoxDied?.Invoke(); //delegate call
     }
 }

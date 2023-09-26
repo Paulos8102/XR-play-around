@@ -7,17 +7,22 @@ public class ShotCount : MonoBehaviour
 {
     private int shotCounter = 0;
     private TextMeshProUGUI bulletText;
-    private TextMeshProUGUI boxText;
-
+    
     // Start is called before the first frame update
     void Start()
     {
         bulletText = GetComponent<TextMeshProUGUI>();
-        FireBulletOnActivate.GunFired += IncreaseCounter;
+        FireBulletOnActivate.GunFired += IncreaseBulletCounter;
+
         UpdateText();
     }
 
-    private void IncreaseCounter()
+    private void OnDestroy()
+    {
+        FireBulletOnActivate.GunFired -= IncreaseBulletCounter;
+    }
+
+    private void IncreaseBulletCounter()
     {
         shotCounter++;
         UpdateText();
@@ -26,11 +31,5 @@ public class ShotCount : MonoBehaviour
     private void UpdateText()
     {
         bulletText.text = shotCounter.ToString();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
