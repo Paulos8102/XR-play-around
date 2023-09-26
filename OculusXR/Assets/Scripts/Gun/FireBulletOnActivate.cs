@@ -18,7 +18,8 @@ public class FireBulletOnActivate : MonoBehaviour
     public float reloadTime = 3f;
     private bool isReloading = false;
 
-    //public Animator anim;
+    public Animator anim;
+    public ParticleSystem muzzleFlash;
 
     [SerializeField] private AudioSource reloadSound;
     [SerializeField] private AudioSource shootSound;
@@ -58,6 +59,8 @@ public class FireBulletOnActivate : MonoBehaviour
 
     public void FireBullet(ActivateEventArgs arg)
     {
+        muzzleFlash.Play();
+
         isFiring = true;
         currentAmmo--;
 
