@@ -6,12 +6,13 @@ using TMPro;
 public class ShotCount : MonoBehaviour
 {
     private int shotCounter = 0;
-    private TextMeshProUGUI text;
+    private TextMeshProUGUI bulletText;
+    private TextMeshProUGUI boxText;
 
     // Start is called before the first frame update
     void Start()
     {
-        text = GetComponent<TextMeshProUGUI>();
+        bulletText = GetComponent<TextMeshProUGUI>();
         FireBulletOnActivate.GunFired += IncreaseCounter;
         UpdateText();
     }
@@ -24,7 +25,7 @@ public class ShotCount : MonoBehaviour
 
     private void UpdateText()
     {
-        text.text = shotCounter.ToString();
+        bulletText.text = shotCounter.ToString();
     }
 
     // Update is called once per frame

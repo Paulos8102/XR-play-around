@@ -12,7 +12,7 @@ public class FireBulletOnActivate : MonoBehaviour
     public float fireSpeed = 20.0f;
 
     private bool isFiring = false;
-    private float nextTimeToFire = 0f;
+    //private float nextTimeToFire = 0f;
 
     public int maxAmmo = 5;
     private int currentAmmo;
