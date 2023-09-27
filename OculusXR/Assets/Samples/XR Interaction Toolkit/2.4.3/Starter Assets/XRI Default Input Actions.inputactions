@@ -627,7 +627,7 @@
                 {
                     "name": "",
                     "id": "84ad9f43-99d1-4817-ba2f-06b4de1218b6",
-                    "path": "<XRController>{LeftHand}/menuButton",
+                    "path": "<XRController>{LeftHand}/start",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.26781482, g: 0.4637894, b: 0.614283, a: 1}
+  m_IndirectSpecularColor: {r: 0.26634783, g: 0.46260175, b: 0.6137135, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2189,8 +2189,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177429710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.31, y: -4.81, z: 12.82}
-  m_LocalScale: {x: 8.359068, y: 2.6594198, z: 0.32562}
+  m_LocalPosition: {x: 8.31, y: -3.26, z: 12.82}
+  m_LocalScale: {x: 8.359068, y: 7.579878, z: 0.32562}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1284022862}
@@ -3223,7 +3223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247282405}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.597437, y: 3.6574283, z: -7.7435184}
+  m_LocalPosition: {x: -25.597437, y: -0.12, z: -10.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13722,8 +13722,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785361588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.7, y: -4.81, z: 12.82}
-  m_LocalScale: {x: 8.359068, y: 2.6594198, z: 0.32562}
+  m_LocalPosition: {x: -2.7, y: -3.26, z: 12.82}
+  m_LocalScale: {x: 8.359068, y: 7.579878, z: 0.32562}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1284022862}
@@ -24601,8 +24601,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1915892878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.86, y: -4.881, z: 12.82}
-  m_LocalScale: {x: 2.9093735, y: 2.5437882, z: 0.0952725}
+  m_LocalPosition: {x: 2.86, y: -4.17, z: 12.82}
+  m_LocalScale: {x: 2.9093735, y: 4.2145486, z: 0.0952725}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1284022862}
@@ -24684,7 +24684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 1
-  loweredHeight: 2.3
+  loweredHeight: 3.9
   wallDoor: {fileID: 1231059886}
   doorSound: {fileID: 1915892884}
 --- !u!82 &1915892884
@@ -25437,7 +25437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997156648}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.357437, y: 1.5094281, z: -2.1295185}
+  m_LocalPosition: {x: -29.357437, y: -0.32, z: -2.1295185}
   m_LocalScale: {x: 0.35476, y: 1.4683485, z: 0.35476}
   m_ConstrainProportionsScale: 0
   m_Children:
