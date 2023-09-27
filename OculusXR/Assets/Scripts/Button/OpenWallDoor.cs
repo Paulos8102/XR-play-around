@@ -10,7 +10,7 @@ public class OpenWallDoor : MonoBehaviour
     private bool lowerDoor = false;
     private Vector3 raisedPosition;
 
-    public GameObject wallDoor;
+    public GameObject wallDoor; //to reference the automatic door close with collider
 
     [SerializeField] private AudioSource doorSound;
 
@@ -31,6 +31,8 @@ public class OpenWallDoor : MonoBehaviour
         }
         else
         {
+            //call trigger here, but how ughhhhhhh -.-
+            
             StartCoroutine(MoveDoor(raisedPosition));
         }
 
@@ -57,7 +59,8 @@ public class OpenWallDoor : MonoBehaviour
     private void OnTriggerEnter(Collider wallDoor)
     {
         Debug.Log("Hit Detected!");
-
-
+        ToggleDoorOpen();
+        //link to the lower part of the movedoor function
+        
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.2668874, g: 0.46299803, b: 0.61386067, a: 1}
+  m_IndirectSpecularColor: {r: 0.26752537, g: 0.4635435, b: 0.6141432, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -24671,7 +24671,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 1
   loweredHeight: 2.3
-  player: {fileID: 657303980}
   wallDoor: {fileID: 1231059886}
   doorSound: {fileID: 1915892884}
 --- !u!82 &1915892884
@@ -26482,7 +26481,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 642d0f78153b1a94e88609264cd88563, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b29d6043096b4044184eb219764b263f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -26582,7 +26581,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 1
   loweredHeight: 2.3
-  player: {fileID: 0}
   wallDoor: {fileID: 0}
   doorSound: {fileID: 2058832550}
 --- !u!65 &2058832552
