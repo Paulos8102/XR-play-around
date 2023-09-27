@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.26591125, g: 0.4621857, b: 0.6134458, a: 1}
+  m_IndirectSpecularColor: {r: 0.2668874, g: 0.46299803, b: 0.61386067, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10435,7 +10435,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 516998536}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.65, y: 1.0534282, z: 7.65}
+  m_LocalPosition: {x: -21.66, y: 1.0534282, z: 22.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11385,6 +11385,7 @@ GameObject:
   - component: {fileID: 657303993}
   - component: {fileID: 657303994}
   - component: {fileID: 657303991}
+  - component: {fileID: 657303995}
   m_Layer: 6
   m_Name: XR Origin
   m_TagString: Untagged
@@ -11677,6 +11678,20 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   leftRay: {fileID: 786341478}
+--- !u!136 &657303995
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657303980}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 2.0067766
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.99412787, z: 0}
 --- !u!1 &661450425
 GameObject:
   m_ObjectHideFlags: 0
@@ -12263,7 +12278,7 @@ MonoBehaviour:
   onPressed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1915892883}
+      - m_Target: {fileID: 2058832551}
         m_TargetAssemblyTypeName: OpenWallDoor, Assembly-CSharp
         m_MethodName: ToggleDoorOpen
         m_Mode: 1
@@ -19284,6 +19299,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!1 &1231059886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1231059887}
+  - component: {fileID: 1231059888}
+  m_Layer: 0
+  m_Name: Close Zone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1231059887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231059886}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.51, y: -6.0659795, z: 14.178078}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1284022862}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1231059888
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231059886}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.9276977, y: 0.5893526, z: 1.6968136}
+  m_Center: {x: 0.29507256, y: -0.08265889, z: -0.3484068}
 --- !u!1 &1233813096 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5686134208185362824, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
@@ -19643,6 +19703,7 @@ Transform:
   - {fileID: 785361589}
   - {fileID: 177429711}
   - {fileID: 1915892879}
+  - {fileID: 1231059887}
   m_Father: {fileID: 1017753971}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24610,6 +24671,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 1
   loweredHeight: 2.3
+  player: {fileID: 657303980}
+  wallDoor: {fileID: 1231059886}
   doorSound: {fileID: 1915892884}
 --- !u!82 &1915892884
 AudioSource:
@@ -26519,7 +26582,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 1
   loweredHeight: 2.3
-  doorSound: {fileID: 0}
+  player: {fileID: 0}
+  wallDoor: {fileID: 0}
+  doorSound: {fileID: 2058832550}
 --- !u!65 &2058832552
 BoxCollider:
   m_ObjectHideFlags: 0

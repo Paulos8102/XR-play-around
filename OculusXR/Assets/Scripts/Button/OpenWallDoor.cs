@@ -10,6 +10,8 @@ public class OpenWallDoor : MonoBehaviour
     private bool lowerDoor = false;
     private Vector3 raisedPosition;
 
+    public GameObject wallDoor;
+
     [SerializeField] private AudioSource doorSound;
 
     // Start is called before the first frame update
@@ -50,5 +52,12 @@ public class OpenWallDoor : MonoBehaviour
         }
 
         transform.position = targetPosition;
+    }
+
+    private void OnTriggerEnter(Collider wallDoor)
+    {
+        Debug.Log("Hit Detected!");
+
+
     }
 }
