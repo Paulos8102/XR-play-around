@@ -11,6 +11,7 @@ public class OpenWallDoor : MonoBehaviour
     private Vector3 raisedPosition;
 
     [SerializeField] private GameObject wallDoor; //to reference the automatic door close with collider
+    private bool entered = false;
 
     [SerializeField] private AudioSource doorSound;
 
