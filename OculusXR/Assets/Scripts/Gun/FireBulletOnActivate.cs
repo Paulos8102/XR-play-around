@@ -8,7 +8,7 @@ public class FireBulletOnActivate : MonoBehaviour
 {
     public GameObject bullet;
     public Transform spawnPoint;
-    public float fireSpeed = 20.0f;
+    public float fireSpeed = 30.0f;
     public float fireRate = 1f;
 
     public ParticleSystem muzzleFlash;
@@ -46,7 +46,7 @@ public class FireBulletOnActivate : MonoBehaviour
     public void OnEnbale()
     {
         isReloading = false;
-        anim.SetBool("Reloading", false);
+        //anim.SetBool("Reloading", false);
     }
 
     // Update is called once per frame
@@ -88,13 +88,13 @@ public class FireBulletOnActivate : MonoBehaviour
     {
         isReloading = true;
 
-        anim.SetBool("Reloading", true);
+        //anim.SetBool("Reloading", true);
 
         reloadSound.Play();
 
         yield return new WaitForSeconds(reloadTime - .25f);
 
-        anim.SetBool("Reloading", false);
+        //anim.SetBool("Reloading", false);
 
         yield return new WaitForSeconds(.25f);
 
