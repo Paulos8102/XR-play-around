@@ -15,7 +15,7 @@ public class VRButton : MonoBehaviour
         if(other.tag == "Button" && !_deadTimeActivate)
         {
             onPressed?.Invoke();
-            Debug.Log("Button is pressed!");
+            //Debug.Log("Button is pressed!");
         }
     }
 
@@ -24,7 +24,7 @@ public class VRButton : MonoBehaviour
         if(other.tag == "Button" && !_deadTimeActivate)
         {
             onReleased?.Invoke();
-            Debug.Log("Button is released");
+            //Debug.Log("Button is released");
             StartCoroutine(WaitForDeadTime());
         }
     }

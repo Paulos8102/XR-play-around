@@ -7,11 +7,11 @@ public class OpenWallDoor : MonoBehaviour
     public float duration = 1.0f;
     public float loweredHeight = 1.5f;
 
-    private bool lowerDoor = false;
+    public bool lowerDoor = false;
     private Vector3 raisedPosition;
 
     [SerializeField] private GameObject wallDoor; //to reference the automatic door close with collider
-    private bool entered = false;
+    public bool entered = false;
 
     [SerializeField] private AudioSource doorSound;
 
@@ -20,24 +20,40 @@ public class OpenWallDoor : MonoBehaviour
     {
         raisedPosition = transform.position;
     }
+    private void OnTriggerEnter(Collider collider)
+    {
+        Debug.Log("Hit Detected");
+        entered = true;
+        
+        ToggleDoorOpen();
+    }
 
     public void ToggleDoorOpen()
     {
         StopAllCoroutines();
 
-        if (!lowerDoor)
+        if (entered == true && lowerDoor == false)
+        {
+            StartCoroutine(MoveDoor(raisedPosition));
+            Debug.Log("guy entered + door closed");
+        }
+
+        if (!lowerDoor)   //to lower (open the gate)
         {
             Vector3 lowerPosition = raisedPosition + Vector3.down * loweredHeight;
             StartCoroutine(MoveDoor(lowerPosition));
+            Debug.Log("door opened");
         }
         else
         {
             //call trigger here, but how ughhhhhhh -.-
             
             StartCoroutine(MoveDoor(raisedPosition));
+            Debug.Log("door closed");
         }
-
-        lowerDoor = !lowerDoor;
+        
+        //if(entered != true)
+            lowerDoor = !lowerDoor;
     }
 
     IEnumerator MoveDoor(Vector3 targetPosition)
@@ -55,11 +71,6 @@ public class OpenWallDoor : MonoBehaviour
         }
 
         transform.position = targetPosition;
-    }
-
-    private void OnTriggerEnter(Collider collider)
-    {
-        Debug.Log("Hit Detected");
     }
 
     //{

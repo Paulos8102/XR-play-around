@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.26663744, g: 0.46280336, b: 0.61378664, a: 1}
+  m_IndirectSpecularColor: {r: 0.26686406, g: 0.46308115, b: 0.6140466, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19099,7 +19099,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 23.496, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22.569, y: 1.983}
+  m_AnchoredPosition: {x: -22.613, y: 1.876}
   m_SizeDelta: {x: 112.7592, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1109127870
@@ -25591,7 +25591,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 1
   loweredHeight: 3.9
+  lowerDoor: 0
   wallDoor: {fileID: 1231059886}
+  entered: 0
   doorSound: {fileID: 1915892884}
 --- !u!82 &1915892884
 AudioSource:
@@ -26529,7 +26531,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1524738761}
   fireSpeed: 10
   fireRate: 1
-  muzzleFlash: {fileID: 0}
+  muzzleFlash: {fileID: 329376540}
   maxAmmo: 5
   reloadTime: 3
   anim: {fileID: 2008610429}
@@ -27302,7 +27304,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033607239}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.00000074506}
+  m_LocalPosition: {x: 0, y: 0, z: -0.6}
   m_LocalScale: {x: 0.71716, y: 0.71716, z: 0.7171601}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27311,7 +27313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.30003, y: -2.3}
+  m_AnchoredPosition: {x: -0.1, y: -0.5}
   m_SizeDelta: {x: 135.54, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2033607241
@@ -27636,7 +27638,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 1
   loweredHeight: 2.3
+  lowerDoor: 0
   wallDoor: {fileID: 0}
+  entered: 0
   doorSound: {fileID: 2058832550}
 --- !u!65 &2058832552
 BoxCollider:
