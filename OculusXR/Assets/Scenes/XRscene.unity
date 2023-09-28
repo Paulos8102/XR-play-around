@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.26634783, g: 0.46260175, b: 0.6137135, a: 1}
+  m_IndirectSpecularColor: {r: 0.26663744, g: 0.46280336, b: 0.61378664, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -26521,7 +26521,7 @@ MonoBehaviour:
   muzzleFlash: {fileID: 419739991}
   maxAmmo: 5
   reloadTime: 3
-  anim: {fileID: 2008610426}
+  anim: {fileID: 2008610429}
   reloadSound: {fileID: 2008610423}
   shootSound: {fileID: 2008610422}
 --- !u!114 &2008610412
@@ -26920,7 +26920,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &2008610426
+--- !u!95 &2008610429
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
