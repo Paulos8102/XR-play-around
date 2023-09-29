@@ -20,23 +20,16 @@ public class OpenWallDoor : MonoBehaviour
     {
         raisedPosition = transform.position;
     }
-    private void OnTriggerEnter(Collider collider)
-    {
-        Debug.Log("Hit Detected");
-        entered = true;
-        
-        ToggleDoorOpen();
-    }
 
     public void ToggleDoorOpen()
     {
         StopAllCoroutines();
 
-        if (entered == true && lowerDoor == false)
-        {
-            StartCoroutine(MoveDoor(raisedPosition));
-            Debug.Log("guy entered + door closed");
-        }
+        //if (entered == lowerDoor == false)
+        //{
+        //    StartCoroutine(MoveDoor(raisedPosition));
+        //    Debug.Log("guy entered + door closed");
+        //}
 
         if (!lowerDoor)   //to lower (open the gate)
         {
@@ -56,12 +49,30 @@ public class OpenWallDoor : MonoBehaviour
             lowerDoor = !lowerDoor;
     }
 
+    private void OnTriggerEnter(Collider collider)
+    {
+        Debug.Log("Hit Detected");
+        entered = true;
+
+        closeDoor();
+        lowerDoor = false;
+    }
+
+    public void closeDoor()
+    {
+        StartCoroutine(MoveDoor(raisedPosition));
+        Debug.Log("door closed");
+    }
+
+
     IEnumerator MoveDoor(Vector3 targetPosition)
     {
         float timeElapsed = 0;
         Vector3 startPosition = transform.position;
 
         doorSound.Play();
+
+        Debug.Log("Moving Door");
 
         while(timeElapsed < duration)
         {
