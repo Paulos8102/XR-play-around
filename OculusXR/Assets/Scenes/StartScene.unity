@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5238657, g: 0.5617042, b: 0.47704506, a: 1}
+  m_IndirectSpecularColor: {r: 0.5238255, g: 0.5616414, b: 0.47703058, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2285,7 +2285,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 840624915}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.2
   m_Height: 2.0067766
   m_Direction: 1
@@ -2604,7 +2604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab7670e32eff43242981cdd5e28deee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skySpeed: 0.4
+  skySpeed: 1
 --- !u!4 &1068393661
 Transform:
   m_ObjectHideFlags: 0
@@ -3355,8 +3355,8 @@ GameObject:
   - component: {fileID: 1327718766}
   - component: {fileID: 1327718765}
   - component: {fileID: 1327718764}
-  - component: {fileID: 1327718763}
   - component: {fileID: 1327718767}
+  - component: {fileID: 1327718768}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -3364,20 +3364,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &1327718763
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1327718762}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1327718764
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3554,6 +3540,20 @@ MonoBehaviour:
   m_Teleporting:
     m_PersistentCalls:
       m_Calls: []
+--- !u!64 &1327718768
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327718762}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1357112916
 GameObject:
   m_ObjectHideFlags: 0
