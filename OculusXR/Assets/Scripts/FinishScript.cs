@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FinishScript : MonoBehaviour
 {
-    private AudioSource finishSound;
+    public AudioSource finishSound;
 
     private bool levelCompleted = false;
     private void Start()

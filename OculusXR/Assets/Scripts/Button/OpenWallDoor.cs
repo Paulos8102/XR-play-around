@@ -60,7 +60,9 @@ public class OpenWallDoor : MonoBehaviour
 
     public void closeDoor()
     {
-        StartCoroutine(MoveDoor(raisedPosition));
+        //StartCoroutine(MoveDoor(raisedPosition));
+        Vector3 lowerPosition = raisedPosition + Vector3.down * loweredHeight;
+        StartCoroutine(MoveDoor(lowerPosition));
         Debug.Log("door closed");
     }
 
