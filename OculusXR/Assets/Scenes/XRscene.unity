@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.26669475, g: 0.4628515, b: 0.61382043, a: 1}
+  m_IndirectSpecularColor: {r: 0.26627043, g: 0.46258363, b: 0.6138209, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11862,7 +11862,7 @@ GameObject:
   - component: {fileID: 657303995}
   m_Layer: 6
   m_Name: XR Origin
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25508,8 +25508,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 19.789038}
-  m_Center: {x: 0, y: 0, z: 9.394522}
+  m_Size: {x: 1, y: 1, z: 14.43636}
+  m_Center: {x: 0, y: 0, z: 12.07085}
 --- !u!23 &1915892881
 MeshRenderer:
   m_ObjectHideFlags: 0
