@@ -17,8 +17,10 @@ public class FinishScript : MonoBehaviour
     {
         Debug.Log("Entered Finish");
         finishSound.Play();
+
         Debug.Log("Collided");
         levelCompleted = true;
+
         Invoke("CompleteLevel", 2f); //delay
 
         //if (collision.gameObject.name == "Player" && !levelCompleted)
