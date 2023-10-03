@@ -62,7 +62,7 @@ public class OpenWallDoor : MonoBehaviour
 
         Debug.Log("Moving Door");
 
-        while(timeElapsed < duration) //as long as the door closes, as t in Lerp in between [0,1]
+        while(timeElapsed < duration) //runs as long as the door closes, as t in Lerp in between [0,1]
         {
             transform.position = Vector3.Lerp(startPosition, targetPosition, timeElapsed / duration);   // t is a ratio, becoz for smooth movement of door incrementally 
             timeElapsed += Time.deltaTime;
