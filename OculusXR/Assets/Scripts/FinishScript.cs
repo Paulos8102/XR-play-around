@@ -9,8 +9,7 @@ public class FinishScript : MonoBehaviour
     private bool levelCompleted = false;
     private void Start()
     {
-        finishSound = GetComponent<AudioSource>();
-        
+        //finishSound = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider collision)

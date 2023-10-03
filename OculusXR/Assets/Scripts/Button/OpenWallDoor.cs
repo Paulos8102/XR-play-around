@@ -10,7 +10,6 @@ public class OpenWallDoor : MonoBehaviour
     public bool lowerDoor = false;
     private Vector3 raisedPosition;
 
-    [SerializeField] private GameObject closeZone; //to reference the automatic door close with collider
     public bool entered = false;
 
     [SerializeField] private AudioSource doorSound;
@@ -25,12 +24,6 @@ public class OpenWallDoor : MonoBehaviour
     {
         StopAllCoroutines();
 
-        //if (entered == lowerDoor == false)
-        //{
-        //    StartCoroutine(MoveDoor(raisedPosition));
-        //    Debug.Log("guy entered + door closed");
-        //}
-
         if (!lowerDoor)   //to lower (open the gate)
         {
             Vector3 lowerPosition = raisedPosition + Vector3.down * loweredHeight;
@@ -39,58 +32,43 @@ public class OpenWallDoor : MonoBehaviour
         }
         else
         {
-            //call trigger here, but how ughhhhhhh -.-
-            
             StartCoroutine(MoveDoor(raisedPosition));
             Debug.Log("door closed");
         }
         
-        //if(entered != true)
-            lowerDoor = !lowerDoor;
+        lowerDoor = !lowerDoor; //switchig the bool
     }
 
     private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("Hit Detected");
-        entered = true;
+        if (collider.tag == "Player")
+        {
+            Debug.Log("Hit Detected");
+            entered = true;
 
-        closeDoor();
-        lowerDoor = false;
+            StartCoroutine(MoveDoor(raisedPosition));
+            Debug.Log("door closed");
+
+            lowerDoor = false;
+        }
     }
-
-
-
-    public void closeDoor()
-    {
-        //StartCoroutine(MoveDoor(raisedPosition));
-        Vector3 lowerPosition = raisedPosition + Vector3.down * loweredHeight;
-        StartCoroutine(MoveDoor(lowerPosition));
-        Debug.Log("door closed");
-    }
-
 
     IEnumerator MoveDoor(Vector3 targetPosition)
     {
-        float timeElapsed = 0;
+        float timeElapsed = 0;  //to keep a check on the time taken since coroutine started
         Vector3 startPosition = transform.position;
 
         doorSound.Play();
 
         Debug.Log("Moving Door");
 
-        while(timeElapsed < duration)
+        while(timeElapsed < duration) //as long as the door closes, as t in Lerp in between [0,1]
         {
-            transform.position = Vector3.Lerp(startPosition, targetPosition, timeElapsed / duration);
+            transform.position = Vector3.Lerp(startPosition, targetPosition, timeElapsed / duration);   // t is a ratio, becoz for smooth movement of door incrementally 
             timeElapsed += Time.deltaTime;
             yield return null;
         }
 
         transform.position = targetPosition;
     }
-
-    //{
-    //    Debug.Log("Hit Detected!");
-    //    ToggleDoorOpen();
-    //    //link to the lower part of the movedoor function
-    //}
 }
