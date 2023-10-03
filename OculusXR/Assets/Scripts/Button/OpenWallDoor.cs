@@ -10,7 +10,7 @@ public class OpenWallDoor : MonoBehaviour
     public bool lowerDoor = false;
     private Vector3 raisedPosition;
 
-    [SerializeField] private GameObject wallDoor; //to reference the automatic door close with collider
+    [SerializeField] private GameObject closeZone; //to reference the automatic door close with collider
     public bool entered = false;
 
     [SerializeField] private AudioSource doorSound;
@@ -62,9 +62,9 @@ public class OpenWallDoor : MonoBehaviour
 
     public void closeDoor()
     {
-        StartCoroutine(MoveDoor(raisedPosition));
-        //Vector3 lowerPosition = raisedPosition + Vector3.down * loweredHeight;
-        //StartCoroutine(MoveDoor(lowerPosition));
+        //StartCoroutine(MoveDoor(raisedPosition));
+        Vector3 lowerPosition = raisedPosition + Vector3.down * loweredHeight;
+        StartCoroutine(MoveDoor(lowerPosition));
         Debug.Log("door closed");
     }
 
