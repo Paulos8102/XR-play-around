@@ -10,18 +10,21 @@ public class FinishScript : MonoBehaviour
     private void Start()
     {
         finishSound = GetComponent<AudioSource>();
-        Debug.Log("Entered Finish");
+        
     }
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.name == "Player" && !levelCompleted)
-        {
-            finishSound.Play();
-            Debug.Log("Collided");
-            levelCompleted = true;
-            Invoke("CompleteLevel", 2f); //delay
-        }
+        Debug.Log("Entered Finish");
+        finishSound.Play();
+        Debug.Log("Collided");
+        levelCompleted = true;
+        Invoke("CompleteLevel", 2f); //delay
+
+        //if (collision.gameObject.name == "Player" && !levelCompleted)
+        //{
+            
+        //}
     }
 
     private void CompleteLevel()
