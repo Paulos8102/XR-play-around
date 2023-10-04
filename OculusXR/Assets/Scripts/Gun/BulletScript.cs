@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class BulletScript : MonoBehaviour
 {
     public float bulletDamage = 10f; // Amount of damage the bullet deals
-    //public GameObject explosionPrefab; // Prefab of the explosion effect
+    public GameObject explosionPrefab; // Prefab of the explosion effect
 
     public void OnTriggerEnter(Collider other)
     {
@@ -16,17 +16,17 @@ public class BulletScript : MonoBehaviour
             if (box != null)
             {
                 box.TakeDamage(bulletDamage);
-                DestroyBullet();
             }
         }
+        DestroyBullet();    //bullet will get destroyed if it hits any object (-u-)
     }
 
     public void DestroyBullet()
     {
-        //if (explosionprefab != null)
-        //{
-        //    instantiate(explosionprefab, transform.position, quaternion.identity);
-        //}
+        if (explosionPrefab != null)
+        {
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        }
         Destroy(gameObject);
     }
 }

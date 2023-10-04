@@ -12,14 +12,14 @@ public class ShotCount : MonoBehaviour
     void Start()
     {
         bulletText = GetComponent<TextMeshProUGUI>();
-        FireBulletOnActivate.GunFired += IncreaseBulletCounter;
+        FireBulletOnActivate.GunFired += IncreaseBulletCounter;     //call from the FireBulletOnActivate Script
 
         UpdateText();
     }
 
     private void OnDestroy()
     {
-        FireBulletOnActivate.GunFired -= IncreaseBulletCounter;
+        FireBulletOnActivate.GunFired -= IncreaseBulletCounter;     //call from the FireBulletOnActivate Script
     }
 
     private void IncreaseBulletCounter()

@@ -13,14 +13,14 @@ public class BoxCount : MonoBehaviour
     void Start()
     {
         boxText = GetComponent<TextMeshProUGUI>();
-        BoxLife.BoxDied += IncreaseBoxCounter;
+        BoxLife.BoxDied += IncreaseBoxCounter;      //call from the BoxLife Script
 
         UpdateText();
     }
 
     private void OnDestroy()
     {
-        BoxLife.BoxDied -= IncreaseBoxCounter;
+        BoxLife.BoxDied -= IncreaseBoxCounter;      //call from the BoxLife Script
     }
 
     private void IncreaseBoxCounter()
