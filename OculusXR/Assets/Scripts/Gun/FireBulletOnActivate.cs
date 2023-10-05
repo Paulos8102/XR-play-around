@@ -11,7 +11,7 @@ public class FireBulletOnActivate : MonoBehaviour
     public float fireSpeed = 30.0f;
     public float fireRate = 1f;
 
-    public ParticleSystem muzzleFlash;
+    //public ParticleSystem muzzleFlash;
 
     private bool isFiring = false;
     private float nextTimeToFire = 0f;
@@ -73,10 +73,10 @@ public class FireBulletOnActivate : MonoBehaviour
         spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
         //forward moves the object in the direction of the blue axis
 
-        muzzleFlash.Play();
+        //muzzleFlash.Play();
         shootSound.Play();
 
-        muzzleFlash.Stop();
+        //muzzleFlash.Stop();
 
         isFiring = false;
         Destroy(spawnedBullet,5);
