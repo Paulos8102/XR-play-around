@@ -10,12 +10,6 @@ public class DebugDisplay : MonoBehaviour
 
     public TextMeshProUGUI display;
 
-    private void Update()
-    {
-        Debug.Log("time:" + Time.time);
-        Debug.Log(gameObject.name);
-    }
-
     private void OnEnable()
     {
         Application.logMessageReceived += HandleLog;
