@@ -11252,7 +11252,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 518831696}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -26830,7 +26830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2623306539444193527, guid: 06793b8a3c863c5419816b387e628d81, type: 3}
   spawnPoint: {fileID: 1524738761}
-  fireSpeed: 20
+  fireSpeed: 25
   fireRate: 1
   maxAmmo: 5
   reloadTime: 3
@@ -27831,10 +27831,10 @@ GameObject:
   - component: {fileID: 2058832554}
   - component: {fileID: 2058832553}
   - component: {fileID: 2058832552}
+  - component: {fileID: 2058832556}
   - component: {fileID: 2058832555}
   - component: {fileID: 2058832551}
   - component: {fileID: 2058832550}
-  - component: {fileID: 2058832556}
   m_Layer: 0
   m_Name: Sliding Door (2)
   m_TagString: Untagged
@@ -27877,7 +27877,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 2.1036415
   MaxDistance: 3.80372
   Pan2D: 0
   rolloffMode: 0

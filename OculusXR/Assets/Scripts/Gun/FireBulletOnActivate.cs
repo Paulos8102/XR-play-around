@@ -53,10 +53,14 @@ public class FireBulletOnActivate : MonoBehaviour
     void Update()
     {
         if (isReloading)
+        {
+            Debug.Log("Has bullets");
             return;
+        }
 
         if (currentAmmo <= 0)
         {
+            Debug.Log("Reloading now");
             StartCoroutine(Reload());
             return;
         }
@@ -91,11 +95,11 @@ public class FireBulletOnActivate : MonoBehaviour
         //anim.SetBool("Reloading", true);
 
         reloadSound.Play();
-
+        Debug.Log("Waiting shd start");
         yield return new WaitForSeconds(reloadTime - .25f);
 
         //anim.SetBool("Reloading", false);
-
+        Debug.Log("Waiting over ig");
         yield return new WaitForSeconds(.25f);
 
         currentAmmo = maxAmmo;
