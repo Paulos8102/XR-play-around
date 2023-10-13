@@ -26833,7 +26833,7 @@ MonoBehaviour:
   fireSpeed: 25
   fireRate: 1
   maxAmmo: 5
-  reloadTime: 3
+  reloadTime: 5
   anim: {fileID: 2008610429}
   reloadSound: {fileID: 2008610423}
   shootSound: {fileID: 2008610422}
