@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.26628122, g: 0.46254492, b: 0.6137043, a: 1}
+  m_IndirectSpecularColor: {r: 0.26699892, g: 0.4630949, b: 0.6140062, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1254,7 +1254,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.1
-  m_Center: {x: -7.6273054e-14, y: 0, z: -0.009791672}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &67840983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9455,7 +9455,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 122
   m_CollisionDetection: 2
 --- !u!114 &337860288
 MonoBehaviour:
@@ -26858,7 +26858,7 @@ MonoBehaviour:
   fireSpeed: 25
   fireRate: 1
   maxAmmo: 5
-  reloadTime: 5
+  reloadTime: 3
   anim: {fileID: 2008610429}
   reloadSound: {fileID: 2008610423}
   shootSound: {fileID: 2008610422}

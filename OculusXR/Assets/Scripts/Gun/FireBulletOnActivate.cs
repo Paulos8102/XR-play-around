@@ -17,7 +17,7 @@ public class FireBulletOnActivate : MonoBehaviour
     private float nextTimeToFire = 0f;
 
     public int maxAmmo = 5;
-    private int currentAmmo;
+    private int currentAmmo = -1;
     public float reloadTime = 3f;
     private bool isReloading = false;
 
@@ -91,6 +91,7 @@ public class FireBulletOnActivate : MonoBehaviour
     public IEnumerator Reload()
     {
         isReloading = true;
+        Debug.Log("Reloading");
 
         //anim.SetBool("Reloading", true);
 
