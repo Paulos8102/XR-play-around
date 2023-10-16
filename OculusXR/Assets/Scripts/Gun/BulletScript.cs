@@ -10,9 +10,9 @@ public class BulletScript : MonoBehaviour
 
     public void OnTriggerEnter(Collider collider)
     {
-        if (other.CompareTag("Box"))
+        if (collider.CompareTag("Box"))
         {
-            BoxLife box = other.GetComponent<BoxLife>();
+            BoxLife box = collider.GetComponent<BoxLife>();
             if (box != null)
             {
                 box.TakeDamage(bulletDamage);
