@@ -23,8 +23,10 @@ public class BulletScript : MonoBehaviour
             {
                 box.TakeDamage(bulletDamage);
             }
+            
         }
-        DestroyBullet();    //bullet will get destroyed if it hits any object (-u-)
+        DestroyBullet();
+        //bullet will get destroyed if it hits any object (-u-)
     }
 
     public void DestroyBullet()
