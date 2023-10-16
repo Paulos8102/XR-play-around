@@ -37,6 +37,7 @@ public class ButtonFollowVisual : MonoBehaviour
         {
             XRPokeInteractor interactor = (XRPokeInteractor)hover.interactorObject;
             isFollowing = true;
+            Debug.Log("Moving Valem");
             freeze = false;
             
             pokeAttachTransform = interactor.attachTransform;
@@ -58,8 +59,8 @@ public class ButtonFollowVisual : MonoBehaviour
         {
             isFollowing = false;
             freeze = false;
-        }
-             
+            Debug.Log("Wait Valem");
+        }       
     }
 
     public void Freeze(BaseInteractionEventArgs hover)
@@ -67,6 +68,7 @@ public class ButtonFollowVisual : MonoBehaviour
         if(hover.interactorObject is XRPokeInteractor)
         {
             freeze = true;
+            Debug.Log("Fixed Valem");
         }
     }
 
