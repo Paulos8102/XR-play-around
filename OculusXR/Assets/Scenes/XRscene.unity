@@ -1314,9 +1314,8 @@ GameObject:
   - component: {fileID: 93206854}
   - component: {fileID: 93206853}
   - component: {fileID: 93206852}
-  - component: {fileID: 93206851}
   - component: {fileID: 93206850}
-  - component: {fileID: 93206849}
+  - component: {fileID: 93206856}
   m_Layer: 0
   m_Name: Enemy - a (5)
   m_TagString: Box
@@ -1340,22 +1339,6 @@ Transform:
   m_Father: {fileID: 444175998}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &93206849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93206847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2c1250e7ee7d3c448a53078781aa650, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gS: 3
-  XDis: -7
-  YDis: 0
-  ZDis: 0
 --- !u!114 &93206850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1370,19 +1353,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   healthBar: {fileID: 305935905}
---- !u!114 &93206851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93206847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f589cc1300bc0f4e95e8fff5b6016e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 30
 --- !u!54 &93206852
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1462,6 +1432,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93206847}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &93206856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93206847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689c812718cf0884bb1f5aa524234b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gS: 3
+  XDis: -7
+  YDis: 0
+  ZDis: 0
+  radialSpeed: 30
 --- !u!1 &124991283
 GameObject:
   m_ObjectHideFlags: 0
@@ -12390,8 +12377,8 @@ GameObject:
   - component: {fileID: 661450431}
   - component: {fileID: 661450430}
   - component: {fileID: 661450429}
-  - component: {fileID: 661450428}
   - component: {fileID: 661450427}
+  - component: {fileID: 661450433}
   m_Layer: 0
   m_Name: Enemy - 2
   m_TagString: Box
@@ -12429,19 +12416,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   healthBar: {fileID: 1919749597}
---- !u!114 &661450428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661450425}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f589cc1300bc0f4e95e8fff5b6016e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 30
 --- !u!54 &661450429
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12521,6 +12495,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661450425}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &661450433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661450425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689c812718cf0884bb1f5aa524234b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gS: 0
+  XDis: 0
+  YDis: 0
+  ZDis: 0
+  radialSpeed: 0
 --- !u!1 &667339918
 GameObject:
   m_ObjectHideFlags: 0
@@ -16629,9 +16620,8 @@ GameObject:
   - component: {fileID: 965102957}
   - component: {fileID: 965102956}
   - component: {fileID: 965102955}
-  - component: {fileID: 965102954}
   - component: {fileID: 965102953}
-  - component: {fileID: 965102952}
+  - component: {fileID: 965102959}
   m_Layer: 0
   m_Name: Enemy - a (3)
   m_TagString: Box
@@ -16655,22 +16645,6 @@ Transform:
   m_Father: {fileID: 444175998}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &965102952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 965102950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2c1250e7ee7d3c448a53078781aa650, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gS: 3
-  XDis: 0
-  YDis: 5
-  ZDis: 0
 --- !u!114 &965102953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16685,19 +16659,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 30
   healthBar: {fileID: 1423858683}
---- !u!114 &965102954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 965102950}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f589cc1300bc0f4e95e8fff5b6016e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 30
 --- !u!54 &965102955
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16777,6 +16738,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965102950}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &965102959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965102950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689c812718cf0884bb1f5aa524234b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gS: 3
+  XDis: 0
+  YDis: 5
+  ZDis: 0
+  radialSpeed: 0
 --- !u!1 &989333843
 GameObject:
   m_ObjectHideFlags: 0
@@ -20075,9 +20053,8 @@ GameObject:
   - component: {fileID: 1165198122}
   - component: {fileID: 1165198121}
   - component: {fileID: 1165198120}
-  - component: {fileID: 1165198119}
   - component: {fileID: 1165198118}
-  - component: {fileID: 1165198117}
+  - component: {fileID: 1165198124}
   m_Layer: 0
   m_Name: Enemy - a
   m_TagString: Box
@@ -20101,22 +20078,6 @@ Transform:
   m_Father: {fileID: 444175998}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1165198117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165198115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2c1250e7ee7d3c448a53078781aa650, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gS: 5
-  XDis: 5
-  YDis: 0
-  ZDis: 0
 --- !u!114 &1165198118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20131,19 +20092,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   healthBar: {fileID: 1080386534}
---- !u!114 &1165198119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165198115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f589cc1300bc0f4e95e8fff5b6016e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 30
 --- !u!54 &1165198120
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20223,6 +20171,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165198115}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1165198124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165198115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689c812718cf0884bb1f5aa524234b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gS: 5
+  XDis: 5
+  YDis: 0
+  ZDis: 0
+  radialSpeed: 30
 --- !u!1 &1193233729
 GameObject:
   m_ObjectHideFlags: 0
@@ -20942,9 +20907,8 @@ GameObject:
   - component: {fileID: 1299971365}
   - component: {fileID: 1299971364}
   - component: {fileID: 1299971363}
-  - component: {fileID: 1299971362}
   - component: {fileID: 1299971361}
-  - component: {fileID: 1299971360}
+  - component: {fileID: 1299971367}
   m_Layer: 0
   m_Name: Enemy - a (2)
   m_TagString: Box
@@ -20968,22 +20932,6 @@ Transform:
   m_Father: {fileID: 444175998}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1299971360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1299971358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2c1250e7ee7d3c448a53078781aa650, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gS: 2
-  XDis: 5
-  YDis: 0
-  ZDis: 3
 --- !u!114 &1299971361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20998,19 +20946,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 70
   healthBar: {fileID: 1466569464}
---- !u!114 &1299971362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1299971358}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f589cc1300bc0f4e95e8fff5b6016e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 30
 --- !u!54 &1299971363
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21090,6 +21025,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299971358}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1299971367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299971358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689c812718cf0884bb1f5aa524234b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gS: 2
+  XDis: 5
+  YDis: 0
+  ZDis: 3
+  radialSpeed: 0
 --- !u!1 &1310519620
 GameObject:
   m_ObjectHideFlags: 0
@@ -21642,9 +21594,8 @@ GameObject:
   - component: {fileID: 1410423814}
   - component: {fileID: 1410423813}
   - component: {fileID: 1410423812}
-  - component: {fileID: 1410423811}
-  - component: {fileID: 1410423810}
-  - component: {fileID: 1410423809}
+  - component: {fileID: 1410423817}
+  - component: {fileID: 1410423816}
   m_Layer: 0
   m_Name: Enemy - a (4)
   m_TagString: Box
@@ -21668,49 +21619,6 @@ Transform:
   m_Father: {fileID: 444175998}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1410423809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410423807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2c1250e7ee7d3c448a53078781aa650, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gS: 3
-  XDis: 0
-  YDis: 5
-  ZDis: 5
---- !u!114 &1410423810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410423807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b52f323d9af41af449d8263b1f48ed28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 50
-  healthBar: {fileID: 1565931906}
---- !u!114 &1410423811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410423807}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f589cc1300bc0f4e95e8fff5b6016e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 30
 --- !u!54 &1410423812
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21790,6 +21698,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410423807}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1410423816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410423807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b52f323d9af41af449d8263b1f48ed28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 50
+  healthBar: {fileID: 1565931906}
+--- !u!114 &1410423817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410423807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689c812718cf0884bb1f5aa524234b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gS: 3
+  XDis: 0
+  YDis: 5
+  ZDis: 5
+  radialSpeed: 30
 --- !u!1 &1415052727
 GameObject:
   m_ObjectHideFlags: 0
@@ -23844,9 +23783,8 @@ GameObject:
   - component: {fileID: 1662983719}
   - component: {fileID: 1662983718}
   - component: {fileID: 1662983717}
-  - component: {fileID: 1662983716}
   - component: {fileID: 1662983715}
-  - component: {fileID: 1662983714}
+  - component: {fileID: 1662983721}
   m_Layer: 0
   m_Name: Enemy - a (1)
   m_TagString: Box
@@ -23870,22 +23808,6 @@ Transform:
   m_Father: {fileID: 444175998}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1662983714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662983712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2c1250e7ee7d3c448a53078781aa650, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gS: 3
-  XDis: 0
-  YDis: 0
-  ZDis: 5
 --- !u!114 &1662983715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23900,19 +23822,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   healthBar: {fileID: 25136056}
---- !u!114 &1662983716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662983712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f589cc1300bc0f4e95e8fff5b6016e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 30
 --- !u!54 &1662983717
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23992,6 +23901,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662983712}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1662983721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662983712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689c812718cf0884bb1f5aa524234b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gS: 3
+  XDis: 0
+  YDis: 0
+  ZDis: 5
+  radialSpeed: 30
 --- !u!1001 &1675133712
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24774,7 +24700,6 @@ GameObject:
   - component: {fileID: 1754325263}
   - component: {fileID: 1754325262}
   - component: {fileID: 1754325267}
-  - component: {fileID: 1754325265}
   - component: {fileID: 1754325266}
   m_Layer: 0
   m_Name: Enemy - 1
@@ -24862,19 +24787,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754325260}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1754325265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1754325260}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f589cc1300bc0f4e95e8fff5b6016e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 30
 --- !u!114 &1754325266
 MonoBehaviour:
   m_ObjectHideFlags: 0
