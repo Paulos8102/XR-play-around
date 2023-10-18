@@ -10,17 +10,14 @@ public class BulletScript : MonoBehaviour
 
     public void OnTriggerEnter(Collider collider)
     {
-        if (collider.CompareTag("Box"))
+        IDamagable shootable = collider.GetComponent<IDamagable>();
+        if (shootable != null)
         {
-            BoxLife box = collider.GetComponent<BoxLife>();
-            if (box != null)
-            {
-                box.TakeDamage(bulletDamage);
-            }
-
+            shootable.TakeDamage(bulletDamage);
         }
+        
         DestroyBullet();
-        //bullet will get destroyed if it hits any object (-u-)
+            //bullet will get destroyed if it hits any object (-u-)
     }
 
     public void DestroyBullet()

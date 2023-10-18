@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BoxLife : MonoBehaviour
+public class BoxLife : MonoBehaviour , IDamagable
 {
     [SerializeField] public float maxHealth = 100f;
     private float currentHealth;

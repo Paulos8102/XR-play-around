@@ -14756,7 +14756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 934972823}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -17958,7 +17958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 934972823}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -26511,7 +26511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2623306539444193527, guid: 06793b8a3c863c5419816b387e628d81, type: 3}
   spawnPoint: {fileID: 1524738761}
-  fireSpeed: 25
+  fireSpeed: 20
   fireRate: 1
   maxAmmo: 5
   reloadTime: 3
