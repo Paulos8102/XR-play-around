@@ -36,7 +36,7 @@ public class OpenWallDoor : MonoBehaviour
             Debug.Log("door closed");
         }
         
-        lowerDoor = !lowerDoor; //switchig the bool
+        lowerDoor = !lowerDoor; //switching the bool
     }
 
     private void OnTriggerEnter(Collider collider)
